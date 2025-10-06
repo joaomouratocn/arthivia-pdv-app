@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic.Logging;
+
 namespace Arthivia_pdv_app
 {
     internal static class Program
@@ -11,7 +13,13 @@ namespace Arthivia_pdv_app
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Main());
+
+            Login login = new();            
+
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Main());
+            }
         }
     }
 }
