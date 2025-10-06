@@ -14,7 +14,9 @@ namespace Arthivia_pdv_app
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Login login = new();            
+            Login login = new();
+            login.StartPosition = FormStartPosition.CenterScreen;
+            login.FormBorderStyle = FormBorderStyle.FixedToolWindow;
 
             if (login.ShowDialog() == DialogResult.OK)
             {

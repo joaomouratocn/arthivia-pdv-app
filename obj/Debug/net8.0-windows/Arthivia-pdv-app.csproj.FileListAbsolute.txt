@@ -3,7 +3,11 @@ C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-ap
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\bin\Debug\net8.0-windows\Arthivia-pdv-app.runtimeconfig.json
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\bin\Debug\net8.0-windows\Arthivia-pdv-app.dll
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\bin\Debug\net8.0-windows\Arthivia-pdv-app.pdb
+C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Login.resources
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Main.resources
+C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Properties.Resources.resources
+C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.RegisterProduct.resources
+C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.SearchProducts.resources
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.csproj.GenerateResource.cache
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.GeneratedMSBuildEditorConfig.editorconfig
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.AssemblyInfoInputs.cache
@@ -14,7 +18,3 @@ C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-ap
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.pdb
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.genruntimeconfig.cache
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\ref\Arthivia-pdv-app.dll
-C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Properties.Resources.resources
-C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Products.resources
-C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.RegisterProduct.resources
-C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Login.resources

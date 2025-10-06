@@ -98,7 +98,7 @@
             // miProductRegister
             // 
             miProductRegister.Name = "miProductRegister";
-            miProductRegister.Size = new Size(121, 22);
+            miProductRegister.Size = new Size(180, 22);
             miProductRegister.Text = "Cadastro";
             miProductRegister.Click += miProductRegister_Click;
             // 

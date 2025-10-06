@@ -14,19 +14,18 @@ namespace Arthivia_pdv_app
 
         public void miProductRegister_Click(object sender, EventArgs e)
         {
-            miCategoriesRegister.Enabled = false;
+            miProductRegister.Enabled = false;
 
-            Products products = new Products(this);
-            products.TopLevel = false;
-            products.FormBorderStyle = FormBorderStyle.None;
-            products.Dock = DockStyle.Fill;
+            SearchProducts searchProducts = new SearchProducts(this);
+            searchProducts.TopLevel = false;
+            searchProducts.Dock = DockStyle.Fill;
 
-            panel.Controls.Add(products);
-            products.Show();
+            panel.Controls.Add(searchProducts);
+            searchProducts.Show();
 
-            products.FormClosed += (s, args) =>
+            searchProducts.FormClosed += (s, args) =>
             {
-                miCategoriesRegister.Enabled = true;
+                miProductRegister.Enabled = true;
             };
         }
 
