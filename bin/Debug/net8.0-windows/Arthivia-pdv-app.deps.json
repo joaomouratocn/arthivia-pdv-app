@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Arthivia-pdv-app/1.0.0": {
+        "runtime": {
+          "Arthivia-pdv-app.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Arthivia-pdv-app/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
