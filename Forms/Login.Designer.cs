@@ -37,8 +37,8 @@
             lblUser = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
             btnAcessar = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            lblInvalidUser = new Label();
+            lblInvalidPassword = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -104,35 +104,35 @@
             btnAcessar.UseVisualStyleBackColor = false;
             btnAcessar.Click += btnAcessar_Click;
             // 
-            // label1
+            // lblInvalidUser
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.IndianRed;
-            label1.Location = new Point(40, 188);
-            label1.Name = "label1";
-            label1.Size = new Size(143, 15);
-            label1.TabIndex = 5;
-            label1.Text = "Nome de usuário inválido";
-            label1.Visible = false;
+            lblInvalidUser.AutoSize = true;
+            lblInvalidUser.ForeColor = Color.IndianRed;
+            lblInvalidUser.Location = new Point(40, 188);
+            lblInvalidUser.Name = "lblInvalidUser";
+            lblInvalidUser.Size = new Size(143, 15);
+            lblInvalidUser.TabIndex = 5;
+            lblInvalidUser.Text = "Nome de usuário inválido";
+            lblInvalidUser.Visible = false;
             // 
-            // label2
+            // lblInvalidPassword
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.IndianRed;
-            label2.Location = new Point(40, 257);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 15);
-            label2.TabIndex = 6;
-            label2.Text = "Senha Inválida";
-            label2.Visible = false;
+            lblInvalidPassword.AutoSize = true;
+            lblInvalidPassword.ForeColor = Color.IndianRed;
+            lblInvalidPassword.Location = new Point(40, 257);
+            lblInvalidPassword.Name = "lblInvalidPassword";
+            lblInvalidPassword.Size = new Size(83, 15);
+            lblInvalidPassword.TabIndex = 6;
+            lblInvalidPassword.Text = "Senha Inválida";
+            lblInvalidPassword.Visible = false;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(384, 361);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblInvalidPassword);
+            Controls.Add(lblInvalidUser);
             Controls.Add(lblUser);
             Controls.Add(lblPassword);
             Controls.Add(btnAcessar);
@@ -160,7 +160,7 @@
         private Label lblUser;
         private ContextMenuStrip contextMenuStrip1;
         private Button btnAcessar;
-        private Label label1;
-        private Label label2;
+        private Label lblInvalidUser;
+        private Label lblInvalidPassword;
     }
 }

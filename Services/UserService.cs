@@ -17,10 +17,17 @@ namespace Arthivia_pdv_app.Services
         }
 
 
-        public bool Authenticate(string username, string password)
+        public int Authenticate(string username, string password)
         {
-            var user = _userRepository.GetAll().FirstOrDefault(u => u.Username == username && u.Password == password);
-            return user != null && user.IsActive;
+            var user = _userRepository.GetAll().FirstOrDefault(u => u.Username == username);
+
+            if (user == null)
+                return 0;
+            else if (user.Password != password)
+                return 1;
+            else
+                return 2; 
+
         }
     }
 }
