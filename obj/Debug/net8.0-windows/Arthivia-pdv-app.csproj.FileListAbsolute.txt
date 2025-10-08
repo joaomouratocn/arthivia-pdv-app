@@ -19,3 +19,4 @@ C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-ap
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.genruntimeconfig.cache
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\ref\Arthivia-pdv-app.dll
 C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia_pdv_app.Forms.NewPassword.resources
+C:\joao\projetos\arthivia\projetos\arthivia-pdv\Arthivia-pdv-app\Arthivia-pdv-app\obj\Debug\net8.0-windows\Arthivia-pdv-app.sourcelink.json

@@ -36,6 +36,7 @@ namespace Arthivia_pdv_app
 
         private void miCalc_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Open Calc");
             Process.Start("calc.exe");
         }
     }

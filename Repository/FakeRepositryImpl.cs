@@ -33,7 +33,7 @@ namespace Arthivia_pdv_app.Repository
                 Name = "Maria Silva",
                 CPF = "987.654.321-00",
                 Username = "MARIA",
-                Password = "ABCD",
+                Password = "ABCDEFG",
                 Role = "user",
                 CreatedAt = DateTime.Now.AddDays(-5),
                 UpdatedAt = DateTime.Now,

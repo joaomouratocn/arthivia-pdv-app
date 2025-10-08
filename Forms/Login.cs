@@ -57,24 +57,16 @@ namespace Arthivia_pdv_app
                     lblInvalidPassword.Visible = true;
                     break;
                 case 2:
-                    if(password == "1234")
-                        resetPassword();
+                    if (password == "1234")
+                        using (var dialog = new NewPassword())
+                        {
+                            dialog.ShowDialog();
+                        }
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                     break;
             }
             
-        }
-
-        private void resetPassword()
-        {
-            using (var dialog = new NewPassword())
-            {
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    //TODO: Implementar alteração de senha
-                }
-            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

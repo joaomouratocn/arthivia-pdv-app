@@ -65,13 +65,14 @@
             // miCalc
             // 
             miCalc.Name = "miCalc";
-            miCalc.Size = new Size(137, 22);
+            miCalc.Size = new Size(180, 22);
             miCalc.Text = "Calculadora";
+            miCalc.Click += miCalc_Click;
             // 
             // miExit
             // 
             miExit.Name = "miExit";
-            miExit.Size = new Size(137, 22);
+            miExit.Size = new Size(180, 22);
             miExit.Text = "Sair";
             miExit.Click += miExit_Click;
             // 
@@ -98,7 +99,7 @@
             // miProductRegister
             // 
             miProductRegister.Name = "miProductRegister";
-            miProductRegister.Size = new Size(180, 22);
+            miProductRegister.Size = new Size(121, 22);
             miProductRegister.Text = "Cadastro";
             miProductRegister.Click += miProductRegister_Click;
             // 
