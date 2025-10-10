@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arthivia_pdv_app.Forms;
-using Arthivia_pdv_app.Repository;
+using Arthivia_pdv_app.Repository.Fakes;
 using Arthivia_pdv_app.Services;
 
 namespace Arthivia_pdv_app
@@ -67,11 +67,6 @@ namespace Arthivia_pdv_app
                     break;
             }
             
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

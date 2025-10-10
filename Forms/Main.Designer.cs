@@ -37,18 +37,22 @@
             miNewSale = new ToolStripMenuItem();
             produtosToolStripMenuItem = new ToolStripMenuItem();
             miProductRegister = new ToolStripMenuItem();
-            msCategories = new ToolStripMenuItem();
-            miCategoriesRegister = new ToolStripMenuItem();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             gerênciaToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
             mainPanel = new Panel();
+            miCategories = new ToolStripMenuItem();
+            miCategoryRegister = new ToolStripMenuItem();
+            miUnits = new ToolStripMenuItem();
+            miUnitRegister = new ToolStripMenuItem();
+            miUsers = new ToolStripMenuItem();
+            miUserRegister = new ToolStripMenuItem();
             msMain.SuspendLayout();
             SuspendLayout();
             // 
             // msMain
             // 
-            msMain.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, msSale, produtosToolStripMenuItem, msCategories, relatóriosToolStripMenuItem, gerênciaToolStripMenuItem, sobreToolStripMenuItem });
+            msMain.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, msSale, produtosToolStripMenuItem, relatóriosToolStripMenuItem, gerênciaToolStripMenuItem, sobreToolStripMenuItem });
             msMain.Location = new Point(0, 0);
             msMain.Name = "msMain";
             msMain.Size = new Size(800, 24);
@@ -65,14 +69,14 @@
             // miCalc
             // 
             miCalc.Name = "miCalc";
-            miCalc.Size = new Size(180, 22);
+            miCalc.Size = new Size(137, 22);
             miCalc.Text = "Calculadora";
             miCalc.Click += miCalc_Click;
             // 
             // miExit
             // 
             miExit.Name = "miExit";
-            miExit.Size = new Size(180, 22);
+            miExit.Size = new Size(137, 22);
             miExit.Text = "Sair";
             miExit.Click += miExit_Click;
             // 
@@ -86,7 +90,7 @@
             // miNewSale
             // 
             miNewSale.Name = "miNewSale";
-            miNewSale.Size = new Size(137, 22);
+            miNewSale.Size = new Size(180, 22);
             miNewSale.Text = "Nova venda";
             // 
             // produtosToolStripMenuItem
@@ -99,22 +103,9 @@
             // miProductRegister
             // 
             miProductRegister.Name = "miProductRegister";
-            miProductRegister.Size = new Size(121, 22);
+            miProductRegister.Size = new Size(180, 22);
             miProductRegister.Text = "Cadastro";
             miProductRegister.Click += miProductRegister_Click;
-            // 
-            // msCategories
-            // 
-            msCategories.DropDownItems.AddRange(new ToolStripItem[] { miCategoriesRegister });
-            msCategories.Name = "msCategories";
-            msCategories.Size = new Size(75, 20);
-            msCategories.Text = "&Categorias";
-            // 
-            // miCategoriesRegister
-            // 
-            miCategoriesRegister.Name = "miCategoriesRegister";
-            miCategoriesRegister.Size = new Size(121, 22);
-            miCategoriesRegister.Text = "Cadastro";
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -124,6 +115,7 @@
             // 
             // gerênciaToolStripMenuItem
             // 
+            gerênciaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { miCategories, miUnits, miUsers });
             gerênciaToolStripMenuItem.Name = "gerênciaToolStripMenuItem";
             gerênciaToolStripMenuItem.Size = new Size(65, 20);
             gerênciaToolStripMenuItem.Text = "&Gerência";
@@ -142,6 +134,46 @@
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(800, 426);
             mainPanel.TabIndex = 1;
+            // 
+            // miCategories
+            // 
+            miCategories.DropDownItems.AddRange(new ToolStripItem[] { miCategoryRegister });
+            miCategories.Name = "miCategories";
+            miCategories.Size = new Size(180, 22);
+            miCategories.Text = "Categorias";
+            // 
+            // miCategoryRegister
+            // 
+            miCategoryRegister.Name = "miCategoryRegister";
+            miCategoryRegister.Size = new Size(180, 22);
+            miCategoryRegister.Text = "Cadastro";
+            miCategoryRegister.Click += miCategoryRegister_Click;
+            // 
+            // miUnits
+            // 
+            miUnits.DropDownItems.AddRange(new ToolStripItem[] { miUnitRegister });
+            miUnits.Name = "miUnits";
+            miUnits.Size = new Size(180, 22);
+            miUnits.Text = "Unidades";
+            // 
+            // miUnitRegister
+            // 
+            miUnitRegister.Name = "miUnitRegister";
+            miUnitRegister.Size = new Size(180, 22);
+            miUnitRegister.Text = "Cadastro";
+            // 
+            // miUsers
+            // 
+            miUsers.DropDownItems.AddRange(new ToolStripItem[] { miUserRegister });
+            miUsers.Name = "miUsers";
+            miUsers.Size = new Size(180, 22);
+            miUsers.Text = "Usuários";
+            // 
+            // miUserRegister
+            // 
+            miUserRegister.Name = "miUserRegister";
+            miUserRegister.Size = new Size(121, 22);
+            miUserRegister.Text = "Cadastro";
             // 
             // Main
             // 
@@ -173,11 +205,15 @@
         private ToolStripMenuItem miNewSale;
         private ToolStripMenuItem produtosToolStripMenuItem;
         private ToolStripMenuItem miProductRegister;
-        private ToolStripMenuItem msCategories;
-        private ToolStripMenuItem miCategoriesRegister;
         private ToolStripMenuItem relatóriosToolStripMenuItem;
         private ToolStripMenuItem gerênciaToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private Panel mainPanel;
+        private ToolStripMenuItem miCategories;
+        private ToolStripMenuItem miCategoryRegister;
+        private ToolStripMenuItem miUnits;
+        private ToolStripMenuItem miUnitRegister;
+        private ToolStripMenuItem miUsers;
+        private ToolStripMenuItem miUserRegister;
     }
 }

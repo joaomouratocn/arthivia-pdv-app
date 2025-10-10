@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Arthivia_pdv_app.Forms;
 
 namespace Arthivia_pdv_app
 {
@@ -38,6 +39,23 @@ namespace Arthivia_pdv_app
         {
             Console.WriteLine("Open Calc");
             Process.Start("calc.exe");
+        }
+
+        private void miCategoryRegister_Click(object sender, EventArgs e)
+        {
+            miCategoryRegister.Enabled = false;
+
+            SearchCategories searchCategories = new SearchCategories(this);
+            searchCategories.TopLevel = false;
+            searchCategories.Dock = DockStyle.Fill;
+
+            panel.Controls.Add(searchCategories);
+            searchCategories.Show();
+
+            searchCategories.FormClosed += (s, args) =>
+            {
+                miCategoryRegister.Enabled = true;
+            };
         }
     }
 }
