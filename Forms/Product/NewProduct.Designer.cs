@@ -1,6 +1,6 @@
 ﻿namespace Arthivia_pdv_app
 {
-    partial class RegisterProduct
+    partial class NewProduct
     {
         /// <summary>
         /// Required designer variable.

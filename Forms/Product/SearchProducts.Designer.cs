@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblCategory = new Label();
             comboBox1 = new ComboBox();
             lblSearch = new Label();
             textBox1 = new TextBox();
             btnSearch = new Button();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             btnClose = new Button();
             btnInsert = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnAlter = new Button();
+            bsData = new BindingSource(components);
+            btnDeletar = new Button();
+            lbProducts = new ListBox();
+            ((System.ComponentModel.ISupportInitialize)bsData).BeginInit();
             SuspendLayout();
             // 
             // lblCategory
@@ -89,7 +92,7 @@
             btnClose.Location = new Point(679, 415);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(109, 23);
-            btnClose.TabIndex = 7;
+            btnClose.TabIndex = 9;
             btnClose.Text = "Fechar";
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
@@ -97,7 +100,7 @@
             // btnInsert
             // 
             btnInsert.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnInsert.Location = new Point(551, 415);
+            btnInsert.Location = new Point(334, 415);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(109, 23);
             btnInsert.TabIndex = 6;
@@ -105,21 +108,43 @@
             btnInsert.UseVisualStyleBackColor = true;
             btnInsert.Click += btnInsert_Click;
             // 
-            // dataGridView1
+            // btnAlter
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 56);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(776, 353);
-            dataGridView1.TabIndex = 5;
+            btnAlter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnAlter.Location = new Point(449, 415);
+            btnAlter.Name = "btnAlter";
+            btnAlter.Size = new Size(109, 23);
+            btnAlter.TabIndex = 7;
+            btnAlter.Text = "Alterar";
+            btnAlter.UseVisualStyleBackColor = true;
+            // 
+            // btnDeletar
+            // 
+            btnDeletar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnDeletar.Location = new Point(564, 415);
+            btnDeletar.Name = "btnDeletar";
+            btnDeletar.Size = new Size(109, 23);
+            btnDeletar.TabIndex = 8;
+            btnDeletar.Text = "Deletar";
+            btnDeletar.UseVisualStyleBackColor = true;
+            // 
+            // lbProducts
+            // 
+            lbProducts.FormattingEnabled = true;
+            lbProducts.ItemHeight = 15;
+            lbProducts.Location = new Point(12, 56);
+            lbProducts.Name = "lbProducts";
+            lbProducts.Size = new Size(774, 349);
+            lbProducts.TabIndex = 10;
             // 
             // SearchProducts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(lbProducts);
+            Controls.Add(btnDeletar);
+            Controls.Add(btnAlter);
             Controls.Add(btnInsert);
             Controls.Add(btnClose);
             Controls.Add(btnSearch);
@@ -132,7 +157,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Produtos";
             WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += SearchProducts_Load;
+            ((System.ComponentModel.ISupportInitialize)bsData).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,9 +169,11 @@
         private Label lblSearch;
         private TextBox textBox1;
         private Button btnSearch;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button btnClose;
         private Button btnInsert;
-        private DataGridView dataGridView1;
+        private Button btnAlter;
+        private BindingSource bsData;
+        private Button btnDeletar;
+        private ListBox lbProducts;
     }
 }

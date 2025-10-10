@@ -58,7 +58,7 @@
             btnClose.Location = new Point(680, 417);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(109, 23);
-            btnClose.TabIndex = 5;
+            btnClose.TabIndex = 7;
             btnClose.Text = "Fechar";
             btnClose.UseVisualStyleBackColor = true;
             // 
@@ -97,7 +97,7 @@
             lbCategories.Location = new Point(12, 58);
             lbCategories.Name = "lbCategories";
             lbCategories.Size = new Size(777, 349);
-            lbCategories.TabIndex = 6;
+            lbCategories.TabIndex = 3;
             lbCategories.ValueMember = "id";
             // 
             // btnUpdate
@@ -106,7 +106,7 @@
             btnUpdate.Location = new Point(450, 417);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(109, 23);
-            btnUpdate.TabIndex = 7;
+            btnUpdate.TabIndex = 5;
             btnUpdate.Text = "Alterar";
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
@@ -117,7 +117,7 @@
             btnDelete.Location = new Point(565, 417);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(109, 23);
-            btnDelete.TabIndex = 8;
+            btnDelete.TabIndex = 6;
             btnDelete.Text = "Deletar";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;

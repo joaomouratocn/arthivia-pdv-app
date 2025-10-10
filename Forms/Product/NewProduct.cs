@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Arthivia_pdv_app
 {
-    public partial class RegisterProduct : Form
+    public partial class NewProduct : Form
     {
-        public RegisterProduct()
+        public NewProduct()
         {
             InitializeComponent();
         }

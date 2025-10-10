@@ -20,7 +20,7 @@ namespace Arthivia_pdv_app
         public Login()
         {
             InitializeComponent();
-            UserRepositorImpl userRepository = new UserRepositorImpl();
+            FakeUserRepositorImpl userRepository = FakeUserRepositorImpl.GetInstance();
             _userService = new UserService(userRepository);    
         }
 
