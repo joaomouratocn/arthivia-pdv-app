@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Arthivia_pdv_app.Model;
 using Arthivia_pdv_app.Repository;
 using Arthivia_pdv_app.Repository.Fakes;
+using Arthivia_pdv_app.util;
 
 namespace Arthivia_pdv_app.Forms
 {
@@ -40,14 +41,15 @@ namespace Arthivia_pdv_app.Forms
                 lblInvalidCategory.Visible = true;
                 return;
             }
-
+            string categoryNormalized = Util.NormalizeText(categoryName);
             if (currentCategory == null)
             {
-                categoryRepository.add(categoryName);
+                categoryRepository.add(categoryNormalized);
             }
             else 
             {
-                var updatedCategory = new Category.Builder().WithId(currentCategory.Id).WithName(categoryName).WithEnabled(true).Build();
+                
+                var updatedCategory = new Category.Builder().WithId(currentCategory.Id).WithName(categoryNormalized).WithEnabled(true).Build();
                 categoryRepository.update(updatedCategory);
             }
             this.Close();

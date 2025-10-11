@@ -32,8 +32,8 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeCategoryReposityImpl()
         {
-            _categories.Add(new Category.Builder().WithName("Refrigerante").WithEnabled(true).Build());
-            _categories.Add(new Category.Builder().WithName("Cervejas").WithEnabled(true).Build());
+            _categories.Add(new Category.Builder().WithName("REFRIGERANTES").WithEnabled(true).Build());
+            _categories.Add(new Category.Builder().WithName("CERVEJAS").WithEnabled(true).Build());
         }
 
         public void add(string name)

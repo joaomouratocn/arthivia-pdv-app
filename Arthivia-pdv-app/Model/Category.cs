@@ -27,7 +27,7 @@ namespace Arthivia_pdv_app.Model
 
             public Builder WithName(string name)
             {
-                _category.Name = name.ToUpper();
+                _category.Name = name;
                 return this;
             }
 

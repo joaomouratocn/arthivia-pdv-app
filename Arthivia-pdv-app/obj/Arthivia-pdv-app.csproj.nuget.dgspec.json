@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {}
+    "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {
+    "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
+        "projectUniqueName": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
         "projectName": "Arthivia-pdv-app",
-        "projectPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
+        "projectPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
         "packagesPath": "C:\\Users\\JMCN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\obj\\",
+        "outputPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JMCN\\AppData\\Roaming\\NuGet\\NuGet.Config",
