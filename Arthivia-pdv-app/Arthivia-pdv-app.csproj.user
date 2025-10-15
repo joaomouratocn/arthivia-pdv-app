@@ -13,6 +13,12 @@
     <Compile Update="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Units\NewUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Units\SearchUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\User\NewPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,6 +26,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Product\SearchProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\User\NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\User\SearchUsers.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

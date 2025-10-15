@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Arthivia_pdv_app.Model
 {
-    internal class Product
+    internal class ProductModel
     {
     }
 }

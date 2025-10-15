@@ -13,7 +13,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
         private static FakeUserRepositorImpl ? _instance;
         private static readonly object _lock = new object();
 
-        private readonly BindingList<User> _users = new BindingList<User>();
+        private readonly BindingList<UserModel> _users = new BindingList<UserModel>();
 
         public static FakeUserRepositorImpl GetInstance()
         {
@@ -32,27 +32,27 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeUserRepositorImpl()
         {
-            _users.Add(new User.Builder().WithName("João Mourato")
+            _users.Add(new UserModel.Builder().WithName("João Mourato")
                 .WithCPF("123.456.789-00")
                 .WithUsername("JOAO")
                 .WithPassword("1234")
-                .WithRole("admin")
+                .WithRole(util.UserRole.ADMIN)
                 .WithCreatedAt(DateTime.Now.AddDays(-10))
                 .WithUpdatedAt(DateTime.Now)
-                .WithIsActive(true)
+                .WithIsActive(util.UserStatus.ATIVO)
                 .Build());
 
-            _users.Add(new User.Builder().WithName("Maria Silva").WithCPF("987.654.321-00")
-                .WithUsername("MARIA")
+            _users.Add(new UserModel.Builder().WithName("Maria Silva").WithCPF("987.654.321-00")
+                .WithUsername("OLIVIA")
                 .WithPassword("ABCDEFG")
-                .WithRole("user")
+                .WithRole(util.UserRole.USER)
                 .WithCreatedAt(DateTime.Now.AddDays(-5))
                 .WithUpdatedAt(DateTime.Now)
-                .WithIsActive(true)
+                .WithIsActive(util.UserStatus.ATIVO)
                 .Build());
         }
 
-        public void Add(User user)
+        public void Add(UserModel user)
         {
             _users.Add(user);
         }
@@ -64,20 +64,20 @@ namespace Arthivia_pdv_app.Repository.Fakes
                 _users.Remove(user);
         }
 
-        public BindingList<User> GetAll()
+        public BindingList<UserModel> GetAll()
         {
             return _users;
         }
 
-        public User? getById(Guid Id) 
+        public UserModel? getById(Guid Id) 
         {
             var user = _users.FirstOrDefault(u => u.Id == Id);
             return user;
         }
 
-        public User? GetById(Guid id) => _users.FirstOrDefault(u => u.Id == id);
+        public UserModel? GetById(Guid id) => _users.FirstOrDefault(u => u.Id == id);
 
-        public void Update(User user)
+        public void Update(UserModel user)
         {
             var findedUser = getById(user.Id);
             if (findedUser != null)

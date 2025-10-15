@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using Arthivia_pdv_app.Forms;
+using Arthivia_pdv_app.Forms.Units;
+using Arthivia_pdv_app.Forms.User;
 
 namespace Arthivia_pdv_app
 {
@@ -11,23 +13,6 @@ namespace Arthivia_pdv_app
         {
             InitializeComponent();
             panel = mainPanel;
-        }
-
-        public void miProductRegister_Click(object sender, EventArgs e)
-        {
-            miProductRegister.Enabled = false;
-
-            SearchProducts searchProducts = new SearchProducts(this);
-            searchProducts.TopLevel = false;
-            searchProducts.Dock = DockStyle.Fill;
-
-            panel.Controls.Add(searchProducts);
-            searchProducts.Show();
-
-            searchProducts.FormClosed += (s, args) =>
-            {
-                miProductRegister.Enabled = true;
-            };
         }
 
         private void miExit_Click(object sender, EventArgs e)
@@ -43,19 +28,40 @@ namespace Arthivia_pdv_app
 
         private void miCategoryRegister_Click(object sender, EventArgs e)
         {
-            miCategoryRegister.Enabled = false;
+            openForm(miCategoryRegister, new SearchCategories());
+        }
 
-            SearchCategories searchCategories = new SearchCategories(this);
-            searchCategories.TopLevel = false;
-            searchCategories.Dock = DockStyle.Fill;
+        public void miProductRegister_Click(object sender, EventArgs e)
+        {
+            openForm(miProductRegister, new SearchProducts());
+        }
 
-            panel.Controls.Add(searchCategories);
-            searchCategories.Show();
+        private void miUnitRegister_Click(object sender, EventArgs e)
+        {
+            openForm(miUnitRegister, new SearchUnit());
+        }
 
-            searchCategories.FormClosed += (s, args) =>
+        private void miUserRegister_Click(object sender, EventArgs e)
+        {
+            openForm(miUserRegister, new SearchUsers());
+        }
+
+        private void openForm(ToolStripMenuItem toolStripMenuItem, Form form)
+        {
+
+            toolStripMenuItem.Enabled = false;
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+
+            panel.Controls.Clear();
+            panel.Controls.Add(form);
+            form.Show();
+
+            form.FormClosed += (s, args) =>
             {
-                miCategoryRegister.Enabled = true;
+                toolStripMenuItem.Enabled = true;
             };
+
         }
     }
 }

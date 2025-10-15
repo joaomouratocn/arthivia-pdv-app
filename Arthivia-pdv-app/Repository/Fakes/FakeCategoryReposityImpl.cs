@@ -28,37 +28,33 @@ namespace Arthivia_pdv_app.Repository.Fakes
             return _instance;
         }
 
-        private readonly BindingList<Category> _categories = new BindingList<Category>();
+        private readonly BindingList<CategoryModel> _categories = new BindingList<CategoryModel>();
 
         private FakeCategoryReposityImpl()
         {
-            _categories.Add(new Category.Builder().WithName("REFRIGERANTES").WithEnabled(true).Build());
-            _categories.Add(new Category.Builder().WithName("CERVEJAS").WithEnabled(true).Build());
+            _categories.Add(new CategoryModel.Builder().WithName("REFRIGERANTES").WithEnabled(true).Build());
+            _categories.Add(new CategoryModel.Builder().WithName("CERVEJAS").WithEnabled(true).Build());
         }
 
-        public void add(string name)
+        public void add(CategoryModel category)
         {
-            var newCategory = new Category.Builder()
-                .WithName(name)
-                .WithEnabled(true)
-                .Build();
-            _categories.Add(newCategory);
+            _categories.Add(category);
         }
 
-        public BindingList<Category> getAll()
+        public BindingList<CategoryModel> getAll()
         {
             var enableCategories = _categories.Where(c => c.enabled).ToList();
 
-            return new BindingList<Category>(enableCategories);
+            return new BindingList<CategoryModel>(enableCategories);
         }
 
-        public Category? getById(Guid id)
+        public CategoryModel? getById(Guid id)
         {
             var category = _categories.FirstOrDefault(c => c.Id == id);
             return category;
         }
 
-        public void update(Category category)
+        public void update(CategoryModel category)
         {
             var findedCategory = getById(category.Id);
             if (findedCategory != null)
@@ -73,7 +69,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
             var category = getById(id);
             if (category != null)
             {
-                var disableCategory = new Category.Builder().WithName(category.Name).WithEnabled(false).Build();
+                var disableCategory = new CategoryModel.Builder().WithName(category.Name).WithEnabled(false).Build();
                 _categories.Remove(category);
             }
         }

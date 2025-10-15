@@ -17,17 +17,17 @@ namespace Arthivia_pdv_app.Forms
     public partial class NewCategory : Form
     {
         private CategoryRepositoryInterface categoryRepository;
-        private Category currentCategory;
+        private CategoryModel? currentCategory;
 
-        public NewCategory(Category current)
+        public NewCategory(CategoryModel? current)
         {
             InitializeComponent();
-            this.currentCategory = current;
             categoryRepository = FakeCategoryReposityImpl.GetInstance();
+            currentCategory = current;                   
 
-            if (currentCategory != null)
+            if (current != null)
             {
-                txtCategoryName.Text = currentCategory.Name;
+                txtCategoryName.Text = currentCategory!.Name;
                 txtCategoryName.SelectAll();
                 this.Text = "Editar Categoria";
             }
@@ -44,12 +44,13 @@ namespace Arthivia_pdv_app.Forms
             string categoryNormalized = Util.NormalizeText(categoryName);
             if (currentCategory == null)
             {
-                categoryRepository.add(categoryNormalized);
+                var newCategory = new CategoryModel.Builder().WithName(categoryNormalized).WithEnabled(true).Build();
+                categoryRepository.add(newCategory);
             }
             else 
             {
                 
-                var updatedCategory = new Category.Builder().WithId(currentCategory.Id).WithName(categoryNormalized).WithEnabled(true).Build();
+                var updatedCategory = new CategoryModel.Builder().WithId(currentCategory.Id).WithName(categoryNormalized).WithEnabled(true).Build();
                 categoryRepository.update(updatedCategory);
             }
             this.Close();

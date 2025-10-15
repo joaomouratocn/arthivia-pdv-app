@@ -61,6 +61,7 @@
             btnClose.TabIndex = 7;
             btnClose.Text = "Fechar";
             btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // btnSearch
             // 

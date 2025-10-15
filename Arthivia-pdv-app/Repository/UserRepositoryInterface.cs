@@ -10,11 +10,10 @@ namespace Arthivia_pdv_app.Repository
 {
     internal interface UserRepositoryInterface
     {
-        BindingList<User> GetAll();
-        User? GetById(Guid id);
-        void Add(User user);
-        void Update(User user);
+        BindingList<UserModel> GetAll();
+        UserModel? GetById(Guid id);
+        void Add(UserModel user);
+        void Update(UserModel user);
         void Delete(Guid id);
-        public User? getById(Guid Id);
     }
 }

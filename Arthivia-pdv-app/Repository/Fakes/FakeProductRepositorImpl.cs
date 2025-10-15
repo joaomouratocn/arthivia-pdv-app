@@ -13,7 +13,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
         private static FakeProductRepositorImpl? _instance;
         private static readonly object _lock = new object();
 
-        private readonly BindingList<Product> _products = new BindingList<Product>();
+        private readonly BindingList<ProductModel> _products = new BindingList<ProductModel>();
 
         public static FakeProductRepositorImpl GetInstance()
         {
@@ -35,7 +35,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
             // Constructor logic here, if needed
         }
 
-        public void Add(Product product)
+        public void Add(ProductModel product)
         {
             _products.Add(product);
         }
@@ -45,22 +45,22 @@ namespace Arthivia_pdv_app.Repository.Fakes
             throw new NotImplementedException();
         }
 
-        public BindingList<Product> GetAll()
+        public BindingList<ProductModel> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Product? GetById(Guid id)
+        public ProductModel? GetById(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Product? getById(Guid Id)
+        public ProductModel? getById(Guid Id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Product user)
+        public void Update(ProductModel user)
         {
             throw new NotImplementedException();
         }

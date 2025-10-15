@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Arthivia_pdv_app.util;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Arthivia_pdv_app.Model
 {
-    public class User
+    public class UserModel
     {
         public Guid Id { get;  private set; }
         public string Name { get; private set; }
         public string CPF { get; private set; }
         public string Username { get;  private set; }
         public string Password { get; private set; }
-        public string Role { get; private set; }
+        public UserRole Role { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
-        public Boolean IsActive { get; private set; }
+        public UserStatus Status { get; private set; }
 
-        private User() { }
+        private UserModel() { }
 
         public class Builder
         {
-            private readonly User _user = new User();
+            private readonly UserModel _user = new UserModel();
             public Builder WithId(Guid id)
             {
                 _user.Id = id;
@@ -48,9 +50,9 @@ namespace Arthivia_pdv_app.Model
                 _user.Password = password;
                 return this;
             }
-            public Builder WithRole(string role)
+            public Builder WithRole(UserRole role)
             {
-                _user.Role = role.ToLower();
+                _user.Role = role;
                 return this;
             }
             public Builder WithCreatedAt(DateTime createdAt)
@@ -63,12 +65,12 @@ namespace Arthivia_pdv_app.Model
                 _user.UpdatedAt = updatedAt;
                 return this;
             }
-            public Builder WithIsActive(Boolean isActive)
+            public Builder WithIsActive(UserStatus status)
             {
-                _user.IsActive = isActive;
+                _user.Status = status;
                 return this;
             }
-            public User Build()
+            public UserModel Build()
             {
                 if (_user.Id == Guid.Empty)
                 {
@@ -90,7 +92,7 @@ namespace Arthivia_pdv_app.Model
                 {
                     throw new InvalidOperationException("Password cannot be null or empty.");
                 }
-                if (string.IsNullOrWhiteSpace(_user.Role))
+                if (!Enum.IsDefined(typeof(UserRole), _user.Role))
                 {
                     throw new InvalidOperationException("Role cannot be null or empty.");
                 }

@@ -39,14 +39,14 @@
             miProductRegister = new ToolStripMenuItem();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             gerênciaToolStripMenuItem = new ToolStripMenuItem();
-            sobreToolStripMenuItem = new ToolStripMenuItem();
-            mainPanel = new Panel();
             miCategories = new ToolStripMenuItem();
             miCategoryRegister = new ToolStripMenuItem();
             miUnits = new ToolStripMenuItem();
             miUnitRegister = new ToolStripMenuItem();
             miUsers = new ToolStripMenuItem();
             miUserRegister = new ToolStripMenuItem();
+            sobreToolStripMenuItem = new ToolStripMenuItem();
+            mainPanel = new Panel();
             msMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             // miNewSale
             // 
             miNewSale.Name = "miNewSale";
-            miNewSale.Size = new Size(180, 22);
+            miNewSale.Size = new Size(137, 22);
             miNewSale.Text = "Nova venda";
             // 
             // produtosToolStripMenuItem
@@ -103,7 +103,7 @@
             // miProductRegister
             // 
             miProductRegister.Name = "miProductRegister";
-            miProductRegister.Size = new Size(180, 22);
+            miProductRegister.Size = new Size(121, 22);
             miProductRegister.Text = "Cadastro";
             miProductRegister.Click += miProductRegister_Click;
             // 
@@ -120,6 +120,48 @@
             gerênciaToolStripMenuItem.Size = new Size(65, 20);
             gerênciaToolStripMenuItem.Text = "&Gerência";
             // 
+            // miCategories
+            // 
+            miCategories.DropDownItems.AddRange(new ToolStripItem[] { miCategoryRegister });
+            miCategories.Name = "miCategories";
+            miCategories.Size = new Size(180, 22);
+            miCategories.Text = "Categorias";
+            // 
+            // miCategoryRegister
+            // 
+            miCategoryRegister.Name = "miCategoryRegister";
+            miCategoryRegister.Size = new Size(121, 22);
+            miCategoryRegister.Text = "Cadastro";
+            miCategoryRegister.Click += miCategoryRegister_Click;
+            // 
+            // miUnits
+            // 
+            miUnits.DropDownItems.AddRange(new ToolStripItem[] { miUnitRegister });
+            miUnits.Name = "miUnits";
+            miUnits.Size = new Size(180, 22);
+            miUnits.Text = "Unidades";
+            // 
+            // miUnitRegister
+            // 
+            miUnitRegister.Name = "miUnitRegister";
+            miUnitRegister.Size = new Size(121, 22);
+            miUnitRegister.Text = "Cadastro";
+            miUnitRegister.Click += miUnitRegister_Click;
+            // 
+            // miUsers
+            // 
+            miUsers.DropDownItems.AddRange(new ToolStripItem[] { miUserRegister });
+            miUsers.Name = "miUsers";
+            miUsers.Size = new Size(180, 22);
+            miUsers.Text = "Usuários";
+            // 
+            // miUserRegister
+            // 
+            miUserRegister.Name = "miUserRegister";
+            miUserRegister.Size = new Size(180, 22);
+            miUserRegister.Text = "Cadastro";
+            miUserRegister.Click += miUserRegister_Click;
+            // 
             // sobreToolStripMenuItem
             // 
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
@@ -134,46 +176,6 @@
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(800, 426);
             mainPanel.TabIndex = 1;
-            // 
-            // miCategories
-            // 
-            miCategories.DropDownItems.AddRange(new ToolStripItem[] { miCategoryRegister });
-            miCategories.Name = "miCategories";
-            miCategories.Size = new Size(180, 22);
-            miCategories.Text = "Categorias";
-            // 
-            // miCategoryRegister
-            // 
-            miCategoryRegister.Name = "miCategoryRegister";
-            miCategoryRegister.Size = new Size(180, 22);
-            miCategoryRegister.Text = "Cadastro";
-            miCategoryRegister.Click += miCategoryRegister_Click;
-            // 
-            // miUnits
-            // 
-            miUnits.DropDownItems.AddRange(new ToolStripItem[] { miUnitRegister });
-            miUnits.Name = "miUnits";
-            miUnits.Size = new Size(180, 22);
-            miUnits.Text = "Unidades";
-            // 
-            // miUnitRegister
-            // 
-            miUnitRegister.Name = "miUnitRegister";
-            miUnitRegister.Size = new Size(180, 22);
-            miUnitRegister.Text = "Cadastro";
-            // 
-            // miUsers
-            // 
-            miUsers.DropDownItems.AddRange(new ToolStripItem[] { miUserRegister });
-            miUsers.Name = "miUsers";
-            miUsers.Size = new Size(180, 22);
-            miUsers.Text = "Usuários";
-            // 
-            // miUserRegister
-            // 
-            miUserRegister.Name = "miUserRegister";
-            miUserRegister.Size = new Size(121, 22);
-            miUserRegister.Text = "Cadastro";
             // 
             // Main
             // 

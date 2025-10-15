@@ -15,28 +15,24 @@ namespace Arthivia_pdv_app.Forms
 {
     public partial class SearchCategories : Form
     {
-        public Main mainForm;
         private CategoryRepositoryInterface categoryRepository;
 
-        public SearchCategories(Main mainForm)
+        public SearchCategories()
         {
             InitializeComponent();
-            this.mainForm = mainForm;
             this.categoryRepository = FakeCategoryReposityImpl.GetInstance();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            using (var newCategory = new NewCategory(null))
-            {
-                this.Enabled = false;
-                var result = newCategory.ShowDialog(this);
-                this.Enabled = true;
+            NewCategory newCategory = new NewCategory(null);
+            this.Enabled = false;
+            var result = newCategory.ShowDialog(this);
+            this.Enabled = true;
 
-                if (result == DialogResult.OK)
-                {
-                    reload();
-                }
+            if (result == DialogResult.OK)
+            {
+                reload();
             }
         }
 
@@ -53,7 +49,7 @@ namespace Arthivia_pdv_app.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var current = bsData.Current as Model.Category;
+            var current = bsData.Current as Model.CategoryModel;
             if (current != null)
             {
                 var result = MessageBox.Show(
@@ -73,18 +69,27 @@ namespace Arthivia_pdv_app.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            using (var newCategory = new NewCategory(bsData.Current as Model.Category))
+            var currentCategory = bsData.Current as Model.CategoryModel;
+            if (currentCategory == null)
             {
-                this.Enabled = false;
-                var result = newCategory.ShowDialog(this);
-                this.Enabled = true;
-                Console.WriteLine(result);
-
-                if (result == DialogResult.OK)
-                {
-                    reload();
-                }
+                MessageBox.Show("Nenhuma categoria selecionada para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+            var formNewCategory = new NewCategory(currentCategory);
+            this.Enabled = false;
+            var result = formNewCategory.ShowDialog(this);
+            this.Enabled = true;
+            Console.WriteLine(result);
+
+            if (result == DialogResult.OK)
+            {
+                reload();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

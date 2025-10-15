@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {}
+    "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {
+    "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
+        "projectUniqueName": "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
         "projectName": "Arthivia-pdv-app",
-        "projectPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
-        "packagesPath": "C:\\Users\\JMCN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\obj\\",
+        "projectPath": "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
+        "packagesPath": "C:\\Users\\Human\\.nuget\\packages\\",
+        "outputPath": "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JMCN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Human\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {

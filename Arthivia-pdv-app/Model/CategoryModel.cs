@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Arthivia_pdv_app.Model
 {
-    public class Category
+    public class CategoryModel
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
 
         public Boolean enabled { get; private set; }
 
-        private Category() { }
+        private CategoryModel() { }
 
         public class Builder
         {
-            private readonly Category _category = new Category();
+            private readonly CategoryModel _category = new CategoryModel();
 
             public Builder WithId(Guid id)
             {
@@ -37,7 +37,7 @@ namespace Arthivia_pdv_app.Model
                 return this;
             }
 
-            public Category Build()
+            public CategoryModel Build()
             {
                 if (_category.Id == Guid.Empty)
                 {

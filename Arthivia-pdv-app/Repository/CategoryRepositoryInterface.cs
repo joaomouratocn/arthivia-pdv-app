@@ -10,11 +10,10 @@ namespace Arthivia_pdv_app.Repository
 {
     internal interface CategoryRepositoryInterface
     {
-        BindingList<Category> getAll();
-        Category? getById(Guid id);
-        void add(string name);
-        void update(Category category);
-
+        BindingList<CategoryModel> getAll();
+        CategoryModel? getById(Guid id);
+        void add(CategoryModel category);
+        void update(CategoryModel category);
         void delete(Guid id);
     }
 }
