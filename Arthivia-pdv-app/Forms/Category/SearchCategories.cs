@@ -43,7 +43,7 @@ namespace Arthivia_pdv_app.Forms
 
         private void reload()
         {
-            bsData.DataSource = categoryRepository.getAll();
+            bsData.DataSource = categoryRepository.GetAll();
             lbCategories.DataSource = bsData;
         }
 

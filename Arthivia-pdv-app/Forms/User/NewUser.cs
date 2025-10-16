@@ -23,6 +23,12 @@ namespace Arthivia_pdv_app.Forms.User
         {
             InitializeComponent();
             this._userModel = userModel;
+        }
+
+        private void NewUser_Load(object sender, EventArgs e)
+        {
+            cbEnable.DataSource = Enum.GetValues(typeof(util.UserStatus));
+            cbPermissions.DataSource = Enum.GetValues(typeof(util.UserRole));
 
             if (this._userModel != null)
             {
@@ -35,13 +41,6 @@ namespace Arthivia_pdv_app.Forms.User
 
                 btnResetPass.Visible = true;
             }
-        }
-
-        private void NewUser_Load(object sender, EventArgs e)
-        {
-            cbEnable.DataSource = Enum.GetValues(typeof(util.UserStatus));
-            cbEnable.SelectedItem = UserStatus.ATIVO;
-            cbPermissions.DataSource = Enum.GetValues(typeof(util.UserRole));
         }
 
         private void btnSave_Click(object sender, EventArgs e)

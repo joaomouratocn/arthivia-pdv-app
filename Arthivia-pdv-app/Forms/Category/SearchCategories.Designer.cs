@@ -41,6 +41,10 @@
             ((System.ComponentModel.ISupportInitialize)bsData).BeginInit();
             SuspendLayout();
             // 
+            // bsData
+            // 
+            bsData.DataSource = typeof(Model.CategoryModel);
+            // 
             // btnInsert
             // 
             btnInsert.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;

@@ -8,7 +8,7 @@ namespace Arthivia_pdv_app.Model
 {
     public class UnitModel
     {
-        public Guid Id { get;  private set; }
+        public int Id { get;  private set; }
         public string Name { get;  private set; }
         public bool enabled { get;  private set; }
 
@@ -17,7 +17,7 @@ namespace Arthivia_pdv_app.Model
         public class Builder
         {
             private readonly UnitModel _unit = new UnitModel();
-            public Builder WithId(Guid id)
+            public Builder WithId(int id)
             {
                 _unit.Id = id;
                 return this;
@@ -34,9 +34,9 @@ namespace Arthivia_pdv_app.Model
             }
             public UnitModel Build()
             {
-                if (_unit.Id == Guid.Empty)
+                if (_unit.Id == 0)
                 {
-                    _unit.Id = Guid.NewGuid();
+                    _unit.Id = new Random().Next(1, int.MaxValue);
                 }
                 if (string.IsNullOrWhiteSpace(_unit.Name))
                 {

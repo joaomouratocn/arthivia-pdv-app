@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Arthivia_pdv_app.util;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Arthivia_pdv_app.Model
 {
     public class UserModel
     {
-        public Guid Id { get;  private set; }
+        public int Id { get;  private set; }
         public string Name { get; private set; }
         public string CPF { get; private set; }
         public string Username { get;  private set; }
@@ -25,7 +24,7 @@ namespace Arthivia_pdv_app.Model
         public class Builder
         {
             private readonly UserModel _user = new UserModel();
-            public Builder WithId(Guid id)
+            public Builder WithId(int id)
             {
                 _user.Id = id;
                 return this;
@@ -72,9 +71,9 @@ namespace Arthivia_pdv_app.Model
             }
             public UserModel Build()
             {
-                if (_user.Id == Guid.Empty)
+                if (_user.Id == 0)
                 {
-                    _user.Id = Guid.NewGuid();
+                    _user.Id = new Random().Next(1, int.MaxValue);
                 }
                 if (string.IsNullOrWhiteSpace(_user.Name))
                 {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Arthivia-pdv-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+189e073b6d1dbb3b4fa1cb72866118507532fe9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1097d3024432b2f5fd139b1a00d2b29ffa7da05")]
 [assembly: System.Reflection.AssemblyProductAttribute("Arthivia-pdv-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Arthivia-pdv-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

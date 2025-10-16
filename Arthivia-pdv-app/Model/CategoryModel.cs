@@ -8,7 +8,7 @@ namespace Arthivia_pdv_app.Model
 {
     public class CategoryModel
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
         public string Name { get; private set; }
 
         public Boolean enabled { get; private set; }
@@ -19,7 +19,7 @@ namespace Arthivia_pdv_app.Model
         {
             private readonly CategoryModel _category = new CategoryModel();
 
-            public Builder WithId(Guid id)
+            public Builder WithId(int id)
             {
                 _category.Id = id;
                 return this;
@@ -39,9 +39,9 @@ namespace Arthivia_pdv_app.Model
 
             public CategoryModel Build()
             {
-                if (_category.Id == Guid.Empty)
+                if (_category.Id == 0)
                 {
-                    _category.Id = Guid.NewGuid();
+                    _category.Id = new Random().Next(1, int.MaxValue);
                 }
                 if (string.IsNullOrWhiteSpace(_category.Name))
                 {

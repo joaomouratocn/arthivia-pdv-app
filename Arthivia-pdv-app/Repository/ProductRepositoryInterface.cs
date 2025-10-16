@@ -11,10 +11,9 @@ namespace Arthivia_pdv_app.Repository
     internal interface ProductRepositoryInterface
     {
         BindingList<ProductModel> GetAll();
-        ProductModel? GetById(Guid id);
+        ProductModel? GetById(int id);
         void Add(ProductModel user);
         void Update(ProductModel user);
-        void Delete(Guid id);
-        public ProductModel? getById(Guid Id);
+        void Delete(int id);
     }
 }

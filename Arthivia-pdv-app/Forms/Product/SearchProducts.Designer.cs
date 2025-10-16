@@ -37,9 +37,17 @@
             btnClose = new Button();
             btnInsert = new Button();
             btnAlter = new Button();
-            bsData = new BindingSource(components);
             btnDeletar = new Button();
-            lbProducts = new ListBox();
+            dgvProducts = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            bsData = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsData).BeginInit();
             SuspendLayout();
             // 
@@ -128,21 +136,82 @@
             btnDeletar.Text = "Deletar";
             btnDeletar.UseVisualStyleBackColor = true;
             // 
-            // lbProducts
+            // dgvProducts
             // 
-            lbProducts.FormattingEnabled = true;
-            lbProducts.ItemHeight = 15;
-            lbProducts.Location = new Point(12, 56);
-            lbProducts.Name = "lbProducts";
-            lbProducts.Size = new Size(774, 349);
-            lbProducts.TabIndex = 10;
+            dgvProducts.AllowUserToAddRows = false;
+            dgvProducts.AllowUserToDeleteRows = false;
+            dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvProducts.AutoGenerateColumns = false;
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProducts.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn4 });
+            dgvProducts.DataSource = bsData;
+            dgvProducts.Location = new Point(10, 56);
+            dgvProducts.Name = "dgvProducts";
+            dgvProducts.ReadOnly = true;
+            dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProducts.Size = new Size(778, 353);
+            dgvProducts.TabIndex = 10;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "BarCode";
+            dataGridViewTextBoxColumn2.HeaderText = "Cod. Barras";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "SalePrice";
+            dataGridViewTextBoxColumn3.HeaderText = "Preço Venda";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.DataPropertyName = "UnitName";
+            dataGridViewTextBoxColumn5.HeaderText = "Unidade";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.DataPropertyName = "CategoryName";
+            dataGridViewTextBoxColumn6.HeaderText = "Categoria";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "description";
+            dataGridViewTextBoxColumn4.HeaderText = "Descrição";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // bsData
+            // 
+            bsData.DataSource = typeof(Model.ProductModel);
             // 
             // SearchProducts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(lbProducts);
+            Controls.Add(dgvProducts);
             Controls.Add(btnDeletar);
             Controls.Add(btnAlter);
             Controls.Add(btnInsert);
@@ -158,6 +227,7 @@
             Text = "Produtos";
             WindowState = FormWindowState.Maximized;
             Load += SearchProducts_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsData).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -172,8 +242,21 @@
         private Button btnClose;
         private Button btnInsert;
         private Button btnAlter;
-        private BindingSource bsData;
         private Button btnDeletar;
-        private ListBox lbProducts;
+        private DataGridView dgvProducts;
+        private BindingSource bsData;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn barCodeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn salePriceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn unitNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

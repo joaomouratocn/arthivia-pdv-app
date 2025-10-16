@@ -41,14 +41,14 @@ namespace Arthivia_pdv_app.Repository.Fakes
             _categories.Add(category);
         }
 
-        public BindingList<CategoryModel> getAll()
+        public BindingList<CategoryModel> GetAll()
         {
             var enableCategories = _categories.Where(c => c.enabled).ToList();
 
             return new BindingList<CategoryModel>(enableCategories);
         }
 
-        public CategoryModel? getById(Guid id)
+        public CategoryModel? getById(int id)
         {
             var category = _categories.FirstOrDefault(c => c.Id == id);
             return category;
@@ -64,7 +64,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
             }
         }
 
-        public void delete(Guid id)
+        public void delete(int id)
         {
             var category = getById(id);
             if (category != null)

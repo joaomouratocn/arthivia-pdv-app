@@ -169,6 +169,7 @@
             MaximumSize = new Size(349, 232);
             MinimumSize = new Size(349, 232);
             Name = "NewUser";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Novo Usuário";
             Load += NewUser_Load;

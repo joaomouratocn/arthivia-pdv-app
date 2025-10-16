@@ -32,7 +32,17 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeProductRepositorImpl()
         {
-            // Constructor logic here, if needed
+            _products.Add(new ProductModel.Builder()
+                .WithName("COCA COLA 2L")
+                .withBarCode("7894900011515")
+                .WithIsActive(true)
+                .WithSalePrice(10.00m)
+                .WithPurchasePrice(7.00m)
+                .WithMarkupPercent(30.0m)
+                .WithDescription("REFRIGERANTE COCA COLA 2L")
+                .WithCategory(FakeCategoryReposityImpl.GetInstance().GetAll()[0])
+                .WithUnit(FakeUnitRespositoryImpl.GetInstance().GetAll()[0])
+                .Build());
         }
 
         public void Add(ProductModel product)
@@ -40,29 +50,34 @@ namespace Arthivia_pdv_app.Repository.Fakes
             _products.Add(product);
         }
 
-        public void Delete(Guid id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var product = GetById(id);
+            if (product != null)
+            {
+                _products.Remove(product);
+            }
         }
 
         public BindingList<ProductModel> GetAll()
         {
-            throw new NotImplementedException();
+            var products = _products.Where(p  => p.IsActive).ToList();
+            return new BindingList<ProductModel>(products);
         }
 
-        public ProductModel? GetById(Guid id)
+        public ProductModel? GetById(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public ProductModel? getById(Guid Id)
-        {
-            throw new NotImplementedException();
+            return _products.FirstOrDefault(p => p.Id == id);
         }
 
         public void Update(ProductModel user)
         {
-            throw new NotImplementedException();
+            var findedProduct = GetById(user.Id);
+            if (findedProduct != null)
+            {
+                var index = _products.IndexOf(findedProduct);
+                _products[index] = user;
+            }
         }
     }
 }

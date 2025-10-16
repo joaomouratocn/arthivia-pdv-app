@@ -57,7 +57,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
             _users.Add(user);
         }
 
-        public void Delete(Guid id)
+        public void Delete(int id)
         {
             var user = GetById(id);
             if (user != null)
@@ -69,13 +69,13 @@ namespace Arthivia_pdv_app.Repository.Fakes
             return _users;
         }
 
-        public UserModel? getById(Guid Id) 
+        public UserModel? getById(int Id) 
         {
             var user = _users.FirstOrDefault(u => u.Id == Id);
             return user;
         }
 
-        public UserModel? GetById(Guid id) => _users.FirstOrDefault(u => u.Id == id);
+        public UserModel? GetById(int id) => _users.FirstOrDefault(u => u.Id == id);
 
         public void Update(UserModel user)
         {

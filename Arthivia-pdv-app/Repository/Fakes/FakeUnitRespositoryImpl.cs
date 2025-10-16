@@ -37,7 +37,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
             _units.Add(new UnitModel.Builder().WithName("LT").WithEnabled(true).Build());
         }
 
-        public void delete(Guid id)
+        public void delete(int id)
         {
             var finded = GetById(id);
             if(finded != null)
@@ -58,7 +58,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
             return new BindingList<UnitModel>(findedUnits);
         }
 
-        public UnitModel? GetById(Guid id)
+        public UnitModel? GetById(int id)
         {
             var finded = _units.FirstOrDefault(u => u.Id == id);
             return finded;

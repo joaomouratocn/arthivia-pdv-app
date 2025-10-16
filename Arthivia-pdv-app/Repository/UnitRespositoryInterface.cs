@@ -11,9 +11,9 @@ namespace Arthivia_pdv_app.Repository
     internal interface UnitRespositoryInterface
     {
         BindingList<UnitModel> GetAll();
-        UnitModel? GetById(Guid id);
+        UnitModel? GetById(int id);
         void insert(UnitModel unit);
         void update(UnitModel unit);
-        void delete(Guid id);
+        void delete(int id);
     }
 }

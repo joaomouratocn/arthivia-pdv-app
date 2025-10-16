@@ -16,7 +16,7 @@ namespace Arthivia_pdv_app
 {
     public partial class SearchProducts : Form
     {
-        private ProductRepositoryInterface userRepository = FakeProductRepositorImpl.GetInstance();
+        private ProductRepositoryInterface productRepository = FakeProductRepositorImpl.GetInstance();
         public SearchProducts()
         {
             InitializeComponent();
@@ -49,8 +49,8 @@ namespace Arthivia_pdv_app
 
         private void reload()
         {
-            bsData.DataSource = userRepository.GetAll();
-            lbProducts.DataSource = bsData;
+            bsData.DataSource = productRepository.GetAll();
+            dgvProducts.DataSource = bsData;
         }
 
         private void SearchProducts_Load(object sender, EventArgs e)

@@ -8,26 +8,27 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Human\\.nuget\\packages\\": {}
+    "C:\\Users\\JMCN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
+      "projectUniqueName": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
       "projectName": "Arthivia-pdv-app",
-      "projectPath": "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
-      "packagesPath": "C:\\Users\\Human\\.nuget\\packages\\",
-      "outputPath": "C:\\joao\\projetos\\arthivia\\projetos\\arthivia-pdv\\Arthivia-pdv-app\\Arthivia-pdv-app\\obj\\",
+      "projectPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\Arthivia-pdv-app.csproj",
+      "packagesPath": "C:\\Users\\JMCN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JMCN\\Documents\\projetos\\desktop\\Arthivia-pdv-app\\Arthivia-pdv-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Human\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JMCN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
