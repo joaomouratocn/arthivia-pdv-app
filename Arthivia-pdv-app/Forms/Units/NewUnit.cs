@@ -46,12 +46,12 @@ namespace Arthivia_pdv_app.Forms.Units
             if (unit == null)
             {
                 var newUnit = new UnitModel.Builder().WithName(normalizedText).WithEnabled(true).Build();
-                unitRespository.insert(newUnit);
+                unitRespository.Add(newUnit);
             }
             else
             {
                 var updateUnit = new UnitModel.Builder().WithId(unit.Id).WithName(normalizedText).WithEnabled(true).Build();
-                unitRespository.update(updateUnit);
+                unitRespository.Update(updateUnit);
             }
             this.DialogResult = DialogResult.OK;
             this.Close();

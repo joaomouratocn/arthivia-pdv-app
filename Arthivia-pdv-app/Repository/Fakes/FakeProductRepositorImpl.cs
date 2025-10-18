@@ -32,7 +32,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeProductRepositorImpl()
         {
-            _products.Add(new ProductModel.Builder()
+            this.Add(new ProductModel.Builder()
                 .WithName("COCA COLA 2L")
                 .withBarCode("7894900011515")
                 .WithIsActive(true)
@@ -47,7 +47,20 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         public void Add(ProductModel product)
         {
-            _products.Add(product);
+            var productWithId = new ProductModel.Builder()
+                .WithId(new Random().Next(1, int.MaxValue))
+                .WithName(product.Name)
+                .withBarCode(product.BarCode)
+                .WithIsActive(product.IsActive)
+                .WithCategory(product.Category)
+                .WithUnit(product.Unit)
+                .WithSalePrice(product.SalePrice)
+                .WithPurchasePrice(product.PurchasePrice)
+                .WithMarkupPercent(product.MarkupPercent)
+                .WithDescription(product.description)
+                .Build();
+
+            _products.Add(productWithId);
         }
 
         public void Delete(int id)

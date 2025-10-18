@@ -8,7 +8,7 @@ namespace Arthivia_pdv_app.Model
 {
     public class CategoryModel
     {
-        public int Id { get; private set; }
+        public int Id { get; private set; } = 0;
         public string Name { get; private set; }
 
         public Boolean enabled { get; private set; }
@@ -38,17 +38,7 @@ namespace Arthivia_pdv_app.Model
             }
 
             public CategoryModel Build()
-            {
-                if (_category.Id == 0)
-                {
-                    _category.Id = new Random().Next(1, int.MaxValue);
-                }
-                if (string.IsNullOrWhiteSpace(_category.Name))
-                {
-                    throw new InvalidOperationException("Name cannot be null or empty.");
-                }
-                return _category;
-            }
+            {return _category;}
         }
     }
 }

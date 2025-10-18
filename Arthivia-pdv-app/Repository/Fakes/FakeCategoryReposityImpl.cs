@@ -32,13 +32,20 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeCategoryReposityImpl()
         {
-            _categories.Add(new CategoryModel.Builder().WithName("REFRIGERANTES").WithEnabled(true).Build());
-            _categories.Add(new CategoryModel.Builder().WithName("CERVEJAS").WithEnabled(true).Build());
+            this.add(new CategoryModel.Builder().WithName("REFRIGERANTES").WithEnabled(true).Build());
+            this.add(new CategoryModel.Builder().WithName("CERVEJAS").WithEnabled(true).Build());
         }
 
         public void add(CategoryModel category)
         {
-            _categories.Add(category);
+            var categoryWithId = new CategoryModel.Builder()
+            .WithId(new Random().Next(1, int.MaxValue))
+            .WithName(category.Name)
+            .WithEnabled(category.enabled)
+            .WithId(_categories.Count + 1)
+            .Build();
+
+            _categories.Add(categoryWithId);
         }
 
         public BindingList<CategoryModel> GetAll()

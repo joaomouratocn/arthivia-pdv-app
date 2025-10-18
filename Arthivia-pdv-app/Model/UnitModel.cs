@@ -8,7 +8,7 @@ namespace Arthivia_pdv_app.Model
 {
     public class UnitModel
     {
-        public int Id { get;  private set; }
+        public int Id { get; private set; } = 0;
         public string Name { get;  private set; }
         public bool enabled { get;  private set; }
 

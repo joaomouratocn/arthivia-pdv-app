@@ -8,7 +8,7 @@ namespace Arthivia_pdv_app.Model
 {
     public class ProductModel
     {
-        public int Id { get;  private set; }
+        public int Id { get; private set; } = 0;
         public string Name { get; private set; }
         public string BarCode { get; private set; }
         public  Boolean IsActive { get; private set; }
@@ -78,10 +78,6 @@ namespace Arthivia_pdv_app.Model
             }
             public ProductModel Build()
             {
-                if (_product.Id == 0)
-                {
-                    _product.Id = new Random().Next(1, int.MaxValue);
-                }
                 if (string.IsNullOrWhiteSpace(_product.Name))
                 {
                     throw new InvalidOperationException("Name cannot be null or empty.");

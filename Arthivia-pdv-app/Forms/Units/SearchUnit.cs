@@ -52,7 +52,7 @@ namespace Arthivia_pdv_app.Forms.Units
 
                 if (result == DialogResult.Yes)
                 {
-                    unitRepository.delete(current.Id);
+                    unitRepository.Delete(current.Id);
                     this.reload();
                 }
             }

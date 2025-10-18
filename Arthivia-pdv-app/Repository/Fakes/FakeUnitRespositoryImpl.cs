@@ -32,12 +32,12 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeUnitRespositoryImpl()
         {
-            _units.Add(new UnitModel.Builder().WithName("UN").WithEnabled(true).Build());
-            _units.Add(new UnitModel.Builder().WithName("KG").WithEnabled(true).Build());
-            _units.Add(new UnitModel.Builder().WithName("LT").WithEnabled(true).Build());
+            this.Add(new UnitModel.Builder().WithName("UN").WithEnabled(true).Build());
+            this.Add(new UnitModel.Builder().WithName("KG").WithEnabled(true).Build());
+            this.Add(new UnitModel.Builder().WithName("LT").WithEnabled(true).Build());
         }
 
-        public void delete(int id)
+        public void Delete(int id)
         {
             var finded = GetById(id);
             if(finded != null)
@@ -64,12 +64,18 @@ namespace Arthivia_pdv_app.Repository.Fakes
             return finded;
         }
 
-        public void insert(UnitModel unit)
+        public void Add(UnitModel unit)
         {
-            _units.Add(unit);
+            var unitWithId = new UnitModel.Builder()
+                .WithId(new Random().Next(1, int.MaxValue))
+                .WithName(unit.Name)
+                .WithEnabled(unit.enabled)
+                .Build();
+
+            _units.Add(unitWithId);
         }
 
-        public void update(UnitModel unit)
+        public void Update(UnitModel unit)
         {
             var finded = GetById(unit.Id);
             if (finded != null)

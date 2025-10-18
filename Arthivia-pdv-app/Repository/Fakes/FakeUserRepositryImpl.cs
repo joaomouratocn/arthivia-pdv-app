@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Arthivia_pdv_app.Model;
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Arthivia_pdv_app.Model;
 
 namespace Arthivia_pdv_app.Repository.Fakes
 {
@@ -32,7 +33,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         private FakeUserRepositorImpl()
         {
-            _users.Add(new UserModel.Builder().WithName("João Mourato")
+            this.Add(new UserModel.Builder().WithName("João Mourato")
                 .WithCPF("123.456.789-00")
                 .WithUsername("JOAO")
                 .WithPassword("1234")
@@ -42,7 +43,7 @@ namespace Arthivia_pdv_app.Repository.Fakes
                 .WithIsActive(util.UserStatus.ATIVO)
                 .Build());
 
-            _users.Add(new UserModel.Builder().WithName("Maria Silva").WithCPF("987.654.321-00")
+            this.Add(new UserModel.Builder().WithName("Maria Silva").WithCPF("987.654.321-00")
                 .WithUsername("OLIVIA")
                 .WithPassword("ABCDEFG")
                 .WithRole(util.UserRole.USER)
@@ -54,7 +55,18 @@ namespace Arthivia_pdv_app.Repository.Fakes
 
         public void Add(UserModel user)
         {
-            _users.Add(user);
+            var userWithId = new UserModel.Builder()
+                .WithId(new Random().Next(1, int.MaxValue))
+                .WithName(user.Name)
+                .WithCPF(user.CPF)
+                .WithUsername(user.Username)
+                .WithPassword(user.Password)
+                .WithRole(user.Role)
+                .WithCreatedAt(user.CreatedAt)
+                .WithUpdatedAt(user.UpdatedAt)
+                .WithIsActive(user.Status)
+                .Build();
+            _users.Add(userWithId);
         }
 
         public void Delete(int id)

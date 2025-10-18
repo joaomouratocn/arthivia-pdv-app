@@ -12,8 +12,8 @@ namespace Arthivia_pdv_app.Repository
     {
         BindingList<UnitModel> GetAll();
         UnitModel? GetById(int id);
-        void insert(UnitModel unit);
-        void update(UnitModel unit);
-        void delete(int id);
+        void Add(UnitModel unit);
+        void Update(UnitModel unit);
+        void Delete(int id);
     }
 }

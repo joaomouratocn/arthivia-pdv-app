@@ -9,7 +9,7 @@ namespace Arthivia_pdv_app.Model
 {
     public class UserModel
     {
-        public int Id { get;  private set; }
+        public int Id { get; private set; } = 0;
         public string Name { get; private set; }
         public string CPF { get; private set; }
         public string Username { get;  private set; }
@@ -71,10 +71,6 @@ namespace Arthivia_pdv_app.Model
             }
             public UserModel Build()
             {
-                if (_user.Id == 0)
-                {
-                    _user.Id = new Random().Next(1, int.MaxValue);
-                }
                 if (string.IsNullOrWhiteSpace(_user.Name))
                 {
                     throw new InvalidOperationException("Name cannot be null or empty.");

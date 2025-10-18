@@ -1,1 +1,19 @@
+# Visual Studio and .NET specific files
 .vs/
+bin/
+obj/
+*.suo
+*.user
+*.userprefs
+*.pdb
+*.ilk
+*.log
+*.ncb
+*.aps
+*.opensdf
+*.sdf
+*.cachefile
+*.builds
+*.pidb
+*.scc
+ipch/
